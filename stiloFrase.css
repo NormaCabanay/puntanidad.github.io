@@ -38,7 +38,7 @@ body{
     text-align: center;
     font-family: 'Courgette', Cursive;
 }
-#cita{
+#frase{
     font-size: 32px;
     width: 100%;
     display: flex;
@@ -56,7 +56,7 @@ body{
   padding: 20px;
   font-family: 'Courgette', Cursive;
 }
-#boton-cambiar-cita{
+#boton-cambiar-frase{
   width: 180px;
   height: 50px;
   font-size: 20px;

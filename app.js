@@ -1,6 +1,6 @@
 // Seleccionar los elementos HTML.
-let botonElem = document.getElementById('boton-cambiar-cita');
-let citaElem = document.getElementById('cita');
+let botonElem = document.getElementById('boton-cambiar-frase');
+let fraseElem = document.getElementById('frase');
 let autorElem = document.getElementById('autor');
 
 // Para generar indices aleatorios.
@@ -12,16 +12,16 @@ function generarEnteroAleatorio(minimo, maximo) {
 }
 
 // Seleccionar una frase aleatoria.
-function cambiarCita() {
-  let indiceAleatorio = generarEnteroAleatorio(0, citas.length);
-  citaElem.textContent = `"${citas[indiceAleatorio].texto}"`;
-  autorElem.textContent = citas[indiceAleatorio].autor;
+function cambiarFrase() {
+  let indiceAleatorio = generarEnteroAleatorio(0, frase.length);
+  fraseElem.textContent = `"${frase[indiceAleatorio].texto}"`;
+  autorElem.textContent = frase[indiceAleatorio].autor;
 }
 
 // Para seleccionar una frase de forma aleatoria
 // cuando se inicia la aplicacion.
-let indiceAleatorio = generarEnteroAleatorio(0, citas.length);
-cambiarCita();
+let indiceAleatorio = generarEnteroAleatorio(0, frase.length);
+cambiarFrase();
 
 // Para cambiar la frase al hacer click en el boton.
-botonElem.addEventListener('click', cambiarCita);;
+botonElem.addEventListener('click', cambiarFrase);;

@@ -1,4 +1,4 @@
-let citas = [
+let frase = [
     {
       'autor': 'Antonio Esteban Agüero',
       'texto': 'Una flor se abrió para mis ojos en la mañana, cuando yo me moría.'
