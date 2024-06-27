@@ -1,8 +1,10 @@
 // Seleccionar los elementos HTML.
+let botonInicialElem = document.getElementById('boton-inicial');
+let inicioElem = document.getElementById('inicio');
+let frasesContenedorElem = document.getElementById('frases-contenedor');
 let botonElem = document.getElementById('boton-cambiar-frase');
 let fraseElem = document.getElementById('frase');
 let autorElem = document.getElementById('autor');
-
 // Para generar indices aleatorios.
 function generarEnteroAleatorio(minimo, maximo) {
   minimo = Math.ceil(minimo);
@@ -23,5 +25,10 @@ function cambiarFrase() {
 let indiceAleatorio = generarEnteroAleatorio(0, frase.length);
 cambiarFrase();
 
+botonInicialElem.addEventListener('click', function() {
+  inicioElem.classList.add('oculto');
+  frasesContenedorElem.classList.remove('oculto');
+  cambiarFrase();
+});
 // Para cambiar la frase al hacer click en el boton.
-botonElem.addEventListener('click', cambiarFrase);;
+botonElem.addEventListener('click', cambiarFrase);
