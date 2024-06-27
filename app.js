@@ -22,8 +22,7 @@ function cambiarFrase() {
 
 // Para seleccionar una frase de forma aleatoria
 // cuando se inicia la aplicacion.
-let indiceAleatorio = generarEnteroAleatorio(0, frase.length);
-cambiarFrase();
+
 
 botonInicialElem.addEventListener('click', function() {
   inicioElem.classList.add('oculto');
