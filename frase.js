@@ -1,3 +1,4 @@
+// se creo la lista de frases y su autor.
 let frase = [
     {
       'autor': 'Antonio Esteban Agüero',

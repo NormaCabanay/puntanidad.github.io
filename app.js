@@ -5,29 +5,29 @@ let frasesContenedorElem = document.getElementById('frases-contenedor');
 let botonElem = document.getElementById('boton-cambiar-frase');
 let fraseElem = document.getElementById('frase');
 let autorElem = document.getElementById('autor');
+let botonSalirElem = document.getElementById('boton-salir');
 // Para generar indices aleatorios.
 function generarEnteroAleatorio(minimo, maximo) {
   minimo = Math.ceil(minimo);
   maximo = Math.floor(maximo);
-  // Incluye el minimo pero no el maximo.
   return Math.floor(Math.random() * (maximo - minimo) + minimo);
 }
-
-// Seleccionar una frase aleatoria.
+//cambia la frase al cliquear boton cambiar frase
 function cambiarFrase() {
   let indiceAleatorio = generarEnteroAleatorio(0, frase.length);
   fraseElem.textContent = `"${frase[indiceAleatorio].texto}"`;
   autorElem.textContent = frase[indiceAleatorio].autor;
 }
-
-// Para seleccionar una frase de forma aleatoria
-// cuando se inicia la aplicacion.
-
-
+botonElem.addEventListener('click', cambiarFrase);
+//abre el div de las frase al cliquear boton ver frase
 botonInicialElem.addEventListener('click', function() {
   inicioElem.classList.add('oculto');
   frasesContenedorElem.classList.remove('oculto');
   cambiarFrase();
 });
-// Para cambiar la frase al hacer click en el boton.
-botonElem.addEventListener('click', cambiarFrase);
+
+// vuelve al anicio al cliquear boton salir
+botonSalirElem.addEventListener('click', function() {
+  frasesContenedorElem.classList.add('oculto');
+  inicioElem.classList.remove('oculto');
+});
